@@ -1,4 +1,4 @@
-Demo project based on Laravel 6 which implements calendar with [FullCalendar](https://fullcalendar.io)
+Laravel  which implements calendar with [FullCalendar](https://fullcalendar.io)
 
 Also, it adds a filter dropdown on top to search for particular data - in this case, venues for events.
 
