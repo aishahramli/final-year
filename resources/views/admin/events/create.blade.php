@@ -3,7 +3,7 @@
 
 <div class="card">
     <div class="card-header">
-        {{ trans('global.create') }} {{ trans('cruds.event.title_singular') }}
+        <h1>{{ trans('global.create') }} {{ trans('cruds.event.title_singular') }}</h1>
     </div>
 
     <div class="card-body">
@@ -11,7 +11,7 @@
             @csrf
             <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
                 <label for="name">{{ trans('cruds.event.fields.name') }}</label>
-                <input type="text" id="name" name="name" class="form-control" value="{{ old('name', isset($event) ? $event->name : '') }}">
+                <input type="text" id="name" name="name" class="form-control" placeholder="Enter name" value="{{ old('name', isset($event) ? $event->name : '') }}">
                 @if($errors->has('name'))
                     <em class="invalid-feedback">
                         {{ $errors->first('name') }}
@@ -23,7 +23,7 @@
             </div>
             <div class="form-group {{ $errors->has('start_time') ? 'has-error' : '' }}">
                 <label for="start_time">{{ trans('cruds.event.fields.start_time') }}</label>
-                <input type="text" id="start_time" name="start_time" class="form-control datetime" value="{{ old('start_time', isset($event) ? $event->start_time : '') }}">
+                <input type="text" id="start_time" name="start_time" placeholder="00:00:00" class="form-control datetime" value="{{ old('start_time', isset($event) ? $event->start_time : '') }}">
                 @if($errors->has('start_time'))
                     <em class="invalid-feedback">
                         {{ $errors->first('start_time') }}
@@ -47,7 +47,7 @@
                 @endif
             </div>
             <div>
-                <input class="btn btn-danger" type="submit" value="{{ trans('global.save') }}">
+                <input class="btn btn-success" type="submit" value="{{ trans('global.save') }}">
             </div>
         </form>
 

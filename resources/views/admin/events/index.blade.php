@@ -11,7 +11,7 @@
 @endcan
 <div class="card">
     <div class="card-header">
-        {{ trans('cruds.event.title_singular') }} {{ trans('global.list') }}
+        <h1>{{ trans('cruds.event.title_singular') }} {{ trans('global.list') }}</h1>
     </div>
 
     <div class="card-body">
@@ -59,13 +59,13 @@
                             </td>
                             <td>
                                 @can('event_show')
-                                    <a class="btn btn-xs btn-primary" href="{{ route('admin.events.show', $event->id) }}">
+                                    <a class="btn btn-info" href="{{ route('admin.events.show', $event->id) }}">
                                         {{ trans('global.view') }}
                                     </a>
                                 @endcan
 
                                 @can('event_edit')
-                                    <a class="btn btn-xs btn-info" href="{{ route('admin.events.edit', $event->id) }}">
+                                    <a class="btn btn-secondary" href="{{ route('admin.events.edit', $event->id) }}">
                                         {{ trans('global.edit') }}
                                     </a>
                                 @endcan
@@ -74,7 +74,7 @@
                                     <form action="{{ route('admin.events.destroy', $event->id) }}" method="POST" onsubmit="return confirm('{{ trans('global.areYouSure') }}');" style="display: inline-block;">
                                         <input type="hidden" name="_method" value="DELETE">
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                        <input type="submit" class="btn btn-xs btn-danger" value="{{ trans('global.delete') }}">
+                                        <input type="submit" class="btn btn-danger" value="{{ trans('global.delete') }}">
                                     </form>
                                 @endcan
 

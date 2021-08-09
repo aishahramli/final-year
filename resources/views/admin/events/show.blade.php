@@ -3,7 +3,7 @@
 
 <div class="card">
     <div class="card-header">
-        {{ trans('global.show') }} {{ trans('cruds.event.title') }}
+        <h1>{{ trans('global.show') }} {{ trans('cruds.event.title') }}</h1>
     </div>
 
     <div class="card-body">
@@ -44,7 +44,7 @@
                     </tr>
                 </tbody>
             </table>
-            <a style="margin-top:20px;" class="btn btn-default" href="{{ url()->previous() }}">
+            <a style="margin-top:20px;" class="btn btn-info" href="{{ url()->previous() }}">
                 {{ trans('global.back_to_list') }}
             </a>
         </div>
