@@ -5,7 +5,7 @@
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-header">
-                    Dashboard
+                    <h1>Facility Booking System<h1>
                 </div>
 
                 <div class="card-body">
@@ -15,8 +15,9 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    You are logged in! You can now book your facility easily ;)
                 </div>
+                <img src="/images/smkbb16.jpg" class="img-fluid" alt="Responsive image">
             </div>
         </div>
     </div>

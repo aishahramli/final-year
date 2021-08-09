@@ -3,7 +3,8 @@
 
 <div class="card">
     <div class="card-header">
-        {{ trans('global.edit') }} {{ trans('cruds.venue.title_singular') }}
+        <!-- <h1>{{ trans('global.edit') }} {{ trans('cruds.venue.title_singular') }}</h1> -->
+        <h1> Edit Facility</h1>
     </div>
 
     <div class="card-body">
@@ -35,7 +36,7 @@
                 </p>
             </div>
             <div>
-                <input class="btn btn-danger" type="submit" value="{{ trans('global.save') }}">
+                <input class="btn btn-success" type="submit" value="{{ trans('global.save') }}">
             </div>
         </form>
 

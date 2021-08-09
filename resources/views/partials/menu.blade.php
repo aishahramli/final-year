@@ -12,14 +12,19 @@
             </li>
             @can('user_management_access')
                 <li class="nav-item nav-dropdown">
+                    
+                    <!-- User management sidebar dropdown -->
                     <a class="nav-link  nav-dropdown-toggle" href="#">
                         <i class="fa-fw fas fa-users nav-icon">
 
                         </i>
-                        {{ trans('cruds.userManagement.title') }}
+                        <!-- {{ trans('cruds.userManagement.title') }} -->
+                        User settings
                     </a>
+
+                    <!-- Permission page -->
                     <ul class="nav-dropdown-items">
-                        @can('permission_access')
+                        <!-- @can('permission_access')
                             <li class="nav-item">
                                 <a href="{{ route("admin.permissions.index") }}" class="nav-link {{ request()->is('admin/permissions') || request()->is('admin/permissions/*') ? 'active' : '' }}">
                                     <i class="fa-fw fas fa-unlock-alt nav-icon">
@@ -38,7 +43,7 @@
                                     {{ trans('cruds.role.title') }}
                                 </a>
                             </li>
-                        @endcan
+                        @endcan -->
                         @can('user_access')
                             <li class="nav-item">
                                 <a href="{{ route("admin.users.index") }}" class="nav-link {{ request()->is('admin/users') || request()->is('admin/users/*') ? 'active' : '' }}">
@@ -58,7 +63,8 @@
                         <i class="fa-fw fas fa-cogs nav-icon">
 
                         </i>
-                        {{ trans('cruds.venue.title') }}
+                        <!-- {{ trans('cruds.venue.title') }} -->
+                        Facilities
                     </a>
                 </li>
             @endcan
@@ -72,15 +78,16 @@
                     </a>
                 </li>
             @endcan
+            <!-- Meeting page -->
             @can('meeting_access')
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a href="{{ route("admin.meetings.index") }}" class="nav-link {{ request()->is('admin/meetings') || request()->is('admin/meetings/*') ? 'active' : '' }}">
                         <i class="fa-fw fas fa-cogs nav-icon">
 
                         </i>
                         {{ trans('cruds.meeting.title') }}
                     </a>
-                </li>
+                </li> -->
             @endcan
             <li class="nav-item">
                 <a href="{{ route("admin.systemCalendar") }}" class="nav-link {{ request()->is('admin/system-calendar') || request()->is('admin/system-calendar/*') ? 'active' : '' }}">

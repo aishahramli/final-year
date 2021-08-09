@@ -4,14 +4,16 @@
     <div style="margin-bottom: 10px;" class="row">
         <div class="col-lg-12">
             <a class="btn btn-success" href="{{ route("admin.venues.create") }}">
-                {{ trans('global.add') }} {{ trans('cruds.venue.title_singular') }}
+                <!-- {{ trans('global.add') }} {{ trans('cruds.venue.title_singular') }} -->
+                Add Facility
             </a>
         </div>
     </div>
 @endcan
 <div class="card">
     <div class="card-header">
-        {{ trans('cruds.venue.title_singular') }} {{ trans('global.list') }}
+        <!-- <h1>{{ trans('cruds.venue.title_singular') }} {{ trans('global.list') }}</h1> -->
+        <h1> Facility List </h1>
     </div>
 
     <div class="card-body">
@@ -53,13 +55,13 @@
                             </td>
                             <td>
                                 @can('venue_show')
-                                    <a class="btn btn-xs btn-primary" href="{{ route('admin.venues.show', $venue->id) }}">
+                                    <a class="btn btn-info" href="{{ route('admin.venues.show', $venue->id) }}">
                                         {{ trans('global.view') }}
                                     </a>
                                 @endcan
 
                                 @can('venue_edit')
-                                    <a class="btn btn-xs btn-info" href="{{ route('admin.venues.edit', $venue->id) }}">
+                                    <a class="btn btn-secondary" href="{{ route('admin.venues.edit', $venue->id) }}">
                                         {{ trans('global.edit') }}
                                     </a>
                                 @endcan
@@ -68,7 +70,7 @@
                                     <form action="{{ route('admin.venues.destroy', $venue->id) }}" method="POST" onsubmit="return confirm('{{ trans('global.areYouSure') }}');" style="display: inline-block;">
                                         <input type="hidden" name="_method" value="DELETE">
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                        <input type="submit" class="btn btn-xs btn-danger" value="{{ trans('global.delete') }}">
+                                        <input type="submit" class="btn btn-danger" value="{{ trans('global.delete') }}">
                                     </form>
                                 @endcan
 
